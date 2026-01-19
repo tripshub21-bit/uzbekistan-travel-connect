@@ -40,25 +40,25 @@ Message: ${formData.message}`;
       icon: Phone,
       label: 'Phone',
       value: PHONE_NUMBER,
-      action: () => window.open(`tel:${PHONE_NUMBER}`, '_self'),
+      href: `tel:${PHONE_NUMBER}`,
     },
     {
       icon: MessageCircle,
       label: 'WhatsApp',
       value: 'Chat with us',
-      action: () => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank'),
+      href: `https://wa.me/${WHATSAPP_NUMBER}`,
     },
     {
       icon: MapPin,
       label: 'Location',
       value: 'Tashkent, Uzbekistan',
-      action: null,
+      href: null,
     },
     {
       icon: Clock,
       label: 'Hours',
       value: '24/7 Available',
-      action: null,
+      href: null,
     },
   ];
 
@@ -82,23 +82,17 @@ Message: ${formData.message}`;
 
         {/* Quick Contact Buttons */}
         <div className="grid grid-cols-2 gap-3 mb-8">
-          <Button
-            variant="whatsapp"
-            size="lg"
-            className="w-full"
-            onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank')}
-          >
-            <MessageCircle className="w-5 h-5" />
-            {t('contact.whatsapp')}
+          <Button asChild variant="whatsapp" size="lg" className="w-full">
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-5 h-5" />
+              {t('contact.whatsapp')}
+            </a>
           </Button>
-          <Button
-            variant="default"
-            size="lg"
-            className="w-full"
-            onClick={() => window.open(`tel:${PHONE_NUMBER}`, '_self')}
-          >
-            <Phone className="w-5 h-5" />
-            {t('contact.call')}
+          <Button asChild variant="default" size="lg" className="w-full">
+            <a href={`tel:${PHONE_NUMBER}`}>
+              <Phone className="w-5 h-5" />
+              {t('contact.call')}
+            </a>
           </Button>
         </div>
       </div>
@@ -202,23 +196,42 @@ Message: ${formData.message}`;
       {/* Contact Info */}
       <div className="container px-4">
         <div className="space-y-3">
-          {contactInfo.map((info, index) => (
-            <div
-              key={index}
-              onClick={info.action || undefined}
-              className={`flex items-center gap-4 bg-card rounded-xl p-4 shadow-card border border-border ${
-                info.action ? 'cursor-pointer hover:bg-muted transition-colors' : ''
-              }`}
-            >
-              <div className="w-12 h-12 rounded-xl hero-gradient flex items-center justify-center flex-shrink-0">
-                <info.icon className="w-6 h-6 text-primary-foreground" />
+          {contactInfo.map((info, index) => {
+            const content = (
+              <>
+                <div className="w-12 h-12 rounded-xl hero-gradient flex items-center justify-center flex-shrink-0">
+                  <info.icon className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <div className="text-sm text-muted-foreground">{info.label}</div>
+                  <div className="font-semibold text-foreground">{info.value}</div>
+                </div>
+              </>
+            );
+
+            if (info.href) {
+              return (
+                <a
+                  key={index}
+                  href={info.href}
+                  target={info.href.startsWith('https') ? '_blank' : undefined}
+                  rel={info.href.startsWith('https') ? 'noopener noreferrer' : undefined}
+                  className="flex items-center gap-4 bg-card rounded-xl p-4 shadow-card border border-border cursor-pointer hover:bg-muted transition-colors"
+                >
+                  {content}
+                </a>
+              );
+            }
+
+            return (
+              <div
+                key={index}
+                className="flex items-center gap-4 bg-card rounded-xl p-4 shadow-card border border-border"
+              >
+                {content}
               </div>
-              <div>
-                <div className="text-sm text-muted-foreground">{info.label}</div>
-                <div className="font-semibold text-foreground">{info.value}</div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

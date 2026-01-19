@@ -27,10 +27,8 @@ const TransferCard: React.FC<TransferCardProps> = ({
 }) => {
   const { t } = useLanguage();
 
-  const handleBooking = () => {
-    const message = encodeURIComponent(`Hello! I'd like to book a private transfer from ${from} to ${to}.`);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
-  };
+  const message = encodeURIComponent(`Hello! I'd like to book a private transfer from ${from} to ${to}.`);
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
   return (
     <div className="bg-card rounded-xl shadow-card overflow-hidden border border-border animate-fade-in">
@@ -83,13 +81,15 @@ const TransferCard: React.FC<TransferCardProps> = ({
 
         {/* CTA Button */}
         <Button
-          onClick={handleBooking}
+          asChild
           variant="whatsapp"
           size="lg"
           className="w-full"
         >
-          <MessageCircle className="w-5 h-5" />
-          {t('transfers.book')}
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="w-5 h-5" />
+            {t('transfers.book')}
+          </a>
         </Button>
       </div>
     </div>
