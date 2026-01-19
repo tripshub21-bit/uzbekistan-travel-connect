@@ -31,10 +31,8 @@ const RouteCard: React.FC<RouteCardProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useLanguage();
 
-  const handleEnquiry = () => {
-    const message = encodeURIComponent(`Hello! I'd like to enquire about train tickets from ${from} to ${to}.`);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
-  };
+  const message = encodeURIComponent(`Hello! I'd like to enquire about train tickets from ${from} to ${to}.`);
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
   return (
     <div className="bg-card rounded-xl shadow-card overflow-hidden border border-border animate-fade-in">
@@ -102,13 +100,15 @@ const RouteCard: React.FC<RouteCardProps> = ({
 
         {/* CTA Button */}
         <Button
-          onClick={handleEnquiry}
+          asChild
           variant="whatsapp"
           size="lg"
           className="w-full"
         >
-          <MessageCircle className="w-5 h-5" />
-          {t('trains.enquire')}
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="w-5 h-5" />
+            {t('trains.enquire')}
+          </a>
         </Button>
       </div>
     </div>
