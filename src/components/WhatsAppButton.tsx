@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_NUMBER = '998901234567'; // Replace with actual number
+const WHATSAPP_NUMBER = '998990152110';
 
 interface WhatsAppButtonProps {
   message?: string;
