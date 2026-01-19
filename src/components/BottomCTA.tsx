@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_NUMBER = '998901234567'; // Replace with actual number
+const WHATSAPP_NUMBER = '998990152110';
 
 const BottomCTA: React.FC = () => {
   const { t } = useLanguage();

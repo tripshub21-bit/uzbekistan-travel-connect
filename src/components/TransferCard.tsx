@@ -16,7 +16,7 @@ interface TransferCardProps {
   vehicles: VehicleOption[];
 }
 
-const WHATSAPP_NUMBER = '998901234567';
+const WHATSAPP_NUMBER = '998990152110';
 
 const TransferCard: React.FC<TransferCardProps> = ({
   from,

@@ -18,7 +18,7 @@ interface RouteCardProps {
   timetable: Timetable[];
 }
 
-const WHATSAPP_NUMBER = '998901234567';
+const WHATSAPP_NUMBER = '998990152110';
 
 const RouteCard: React.FC<RouteCardProps> = ({
   from,
