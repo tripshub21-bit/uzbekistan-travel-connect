@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Clock, MapPin, Train as TrainIcon, MessageCircle } from 'lucide-react';
+import React from 'react';
+import { Clock, MapPin, Train as TrainIcon, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -28,7 +28,6 @@ const RouteCard: React.FC<RouteCardProps> = ({
   trainType,
   timetable,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useLanguage();
 
   const message = encodeURIComponent(`Hello! I'd like to enquire about train tickets from ${from} to ${to}.`);
@@ -64,39 +63,27 @@ const RouteCard: React.FC<RouteCardProps> = ({
           </div>
         </div>
 
-        {/* Timetable Toggle */}
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="w-full flex items-center justify-between py-3 px-4 rounded-lg bg-muted text-sm font-medium text-foreground hover:bg-muted/80 transition-colors mb-4"
-        >
-          <span>{t('trains.timetable')}</span>
-          {isExpanded ? (
-            <ChevronUp className="w-5 h-5 text-muted-foreground" />
-          ) : (
-            <ChevronDown className="w-5 h-5 text-muted-foreground" />
-          )}
-        </button>
+        {/* Timetable Header */}
+        <div className="text-sm font-medium text-foreground mb-2">{t('trains.timetable')}</div>
 
         {/* Timetable Content */}
-        {isExpanded && (
-          <div className="mb-4 rounded-lg bg-muted/50 overflow-hidden animate-fade-in">
-            <div className="grid grid-cols-3 gap-2 p-3 text-xs font-semibold text-muted-foreground border-b border-border">
-              <span>Departure</span>
-              <span>Arrival</span>
-              <span>Train</span>
-            </div>
-            {timetable.map((item, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-3 gap-2 p-3 text-sm text-foreground border-b border-border last:border-0"
-              >
-                <span className="font-medium">{item.departure}</span>
-                <span className="font-medium">{item.arrival}</span>
-                <span className="text-muted-foreground">{item.train}</span>
-              </div>
-            ))}
+        <div className="mb-4 rounded-lg bg-muted/50 overflow-hidden">
+          <div className="grid grid-cols-3 gap-2 p-3 text-xs font-semibold text-muted-foreground border-b border-border">
+            <span>Departure</span>
+            <span>Arrival</span>
+            <span>Train</span>
           </div>
-        )}
+          {timetable.map((item, index) => (
+            <div
+              key={index}
+              className="grid grid-cols-3 gap-2 p-3 text-sm text-foreground border-b border-border last:border-0"
+            >
+              <span className="font-medium">{item.departure}</span>
+              <span className="font-medium">{item.arrival}</span>
+              <span className="text-muted-foreground">{item.train}</span>
+            </div>
+          ))}
+        </div>
 
         {/* CTA Button */}
         <Button
