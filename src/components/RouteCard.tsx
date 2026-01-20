@@ -68,19 +68,17 @@ const RouteCard: React.FC<RouteCardProps> = ({
 
         {/* Timetable Content */}
         <div className="mb-4 rounded-lg bg-muted/50 overflow-hidden">
-          <div className="grid grid-cols-3 gap-2 p-3 text-xs font-semibold text-muted-foreground border-b border-border">
+          <div className="grid grid-cols-2 gap-2 p-3 text-xs font-semibold text-muted-foreground border-b border-border">
             <span>Departure</span>
             <span>Arrival</span>
-            <span>Train</span>
           </div>
           {timetable.map((item, index) => (
             <div
               key={index}
-              className="grid grid-cols-3 gap-2 p-3 text-sm text-foreground border-b border-border last:border-0"
+              className="grid grid-cols-2 gap-2 p-3 text-sm text-foreground border-b border-border last:border-0"
             >
               <span className="font-medium">{item.departure}</span>
               <span className="font-medium">{item.arrival}</span>
-              <span className="text-muted-foreground">{item.train}</span>
             </div>
           ))}
         </div>
