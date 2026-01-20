@@ -13,12 +13,12 @@ const BottomCTA: React.FC = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur-md border-t border-border safe-bottom">
-      <div className="container py-3">
+      <div className="container py-2.5 sm:py-3 px-3 sm:px-4">
         <Button
           asChild
           variant="whatsapp"
           size="lg"
-          className="w-full"
+          className="w-full h-12 sm:h-14 text-sm sm:text-base"
         >
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-5 h-5" />
