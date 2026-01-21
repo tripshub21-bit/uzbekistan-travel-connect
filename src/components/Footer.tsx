@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Train, MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-
 const Footer: React.FC = () => {
-  const { t } = useLanguage();
-
-  return (
-    <footer className="bg-foreground text-primary-foreground pb-24">
+  const {
+    t
+  } = useLanguage();
+  return <footer className="bg-foreground text-primary-foreground pb-24">
       <div className="container px-4 py-10">
         {/* Logo */}
         <div className="flex items-center gap-3 mb-6">
@@ -51,7 +50,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4" />
-            <span>+998 90 123 45 67</span>
+            <span>+998 990152110</span>
           </div>
         </div>
 
@@ -60,8 +59,6 @@ const Footer: React.FC = () => {
           © {new Date().getFullYear()} JamTripsGo. All rights reserved.
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
