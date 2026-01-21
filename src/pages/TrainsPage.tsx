@@ -29,10 +29,9 @@ const TrainsPage: React.FC = () => {
       duration: '4h 00min',
       trainType: 'Afrosiyab',
       timetable: [
-        { departure: '07:28', arrival: '11:28', train: 'Afrosiyab 761' },
-        { departure: '08:00', arrival: '12:00', train: 'Afrosiyab 765' },
-        { departure: '14:00', arrival: '18:00', train: 'Afrosiyab 763' },
-        { departure: '18:30', arrival: '22:55', train: 'Sharq 9' },
+        { departure: '07:30', arrival: '11:42', train: 'Afrosiyab' },
+        { departure: '08:30', arrival: '12:42', train: 'Afrosiyab' },
+        { departure: '19:48', arrival: '00:06', train: 'Afrosiyab' },
       ],
     },
     {
