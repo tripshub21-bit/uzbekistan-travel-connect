@@ -20,8 +20,6 @@ const TrainsPage: React.FC = () => {
         { departure: '08:00', arrival: '10:25', train: 'Afrosiyab 765' },
         { departure: '08:30', arrival: '10:49', train: 'Afrosiyab' },
         { departure: '19:48', arrival: '22:13', train: 'Afrosiyab 763' },
-        { departure: '17:00', arrival: '19:10', train: 'Afrosiyab 767' },
-        { departure: '18:30', arrival: '20:40', train: 'Sharq 9' },
       ],
     },
     {
