@@ -23,6 +23,20 @@ const TrainsPage: React.FC = () => {
       ],
     },
     {
+      from: 'Samarkand',
+      to: 'Tashkent',
+      distance: 344,
+      duration: '2h 10min',
+      trainType: 'Afrosiyab',
+      timetable: [
+        { departure: '10:00', arrival: '12:10', train: 'Afrosiyab' },
+        { departure: '12:30', arrival: '14:40', train: 'Afrosiyab' },
+        { departure: '15:00', arrival: '17:10', train: 'Afrosiyab' },
+        { departure: '18:00', arrival: '20:10', train: 'Afrosiyab' },
+        { departure: '20:30', arrival: '22:40', train: 'Afrosiyab' },
+      ],
+    },
+    {
       from: 'Tashkent',
       to: 'Bukhara',
       distance: 600,
