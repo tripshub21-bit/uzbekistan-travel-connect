@@ -46,6 +46,12 @@ const translations: Translations = {
   'transfers.passengers': { en: 'passengers', ru: 'пассажиров' },
   'transfers.book': { en: 'Book Private Transfer via WhatsApp', ru: 'Забронировать через WhatsApp' },
   'transfers.viceVersa': { en: 'All transfers available in reverse direction on request', ru: 'Все трансферы доступны в обратном направлении по запросу' },
+  'transfers.customTitle': { en: 'Custom Route Request', ru: 'Запрос на другой маршрут' },
+  'transfers.customSubtitle': { en: 'Request a transfer for any destination', ru: 'Закажите трансфер в любое место' },
+  'transfers.customFrom': { en: 'Pickup Location', ru: 'Место отправления' },
+  'transfers.customTo': { en: 'Destination', ru: 'Место назначения' },
+  'transfers.customNotes': { en: 'Additional notes (optional)', ru: 'Дополнительные пожелания (необязательно)' },
+  'transfers.customSubmit': { en: 'Request via WhatsApp', ru: 'Отправить запрос через WhatsApp' },
 
   // About Page
   'about.title': { en: 'About JamTripsGo', ru: 'О компании JamTripsGo' },

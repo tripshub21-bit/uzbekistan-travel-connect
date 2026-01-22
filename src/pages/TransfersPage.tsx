@@ -1,6 +1,7 @@
 import React from 'react';
 import { Car } from 'lucide-react';
 import TransferCard from '@/components/TransferCard';
+import CustomTransferForm from '@/components/CustomTransferForm';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const TransfersPage: React.FC = () => {
@@ -93,6 +94,11 @@ const TransfersPage: React.FC = () => {
               vehicles={route.vehicles}
             />
           ))}
+        </div>
+
+        {/* Custom Transfer Request Form */}
+        <div className="mt-6 sm:mt-8">
+          <CustomTransferForm />
         </div>
       </div>
     </div>
