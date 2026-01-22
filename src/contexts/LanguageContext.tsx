@@ -45,6 +45,7 @@ const translations: Translations = {
   'transfers.minibus': { en: 'Minibus', ru: 'Микроавтобус' },
   'transfers.passengers': { en: 'passengers', ru: 'пассажиров' },
   'transfers.book': { en: 'Book Private Transfer via WhatsApp', ru: 'Забронировать через WhatsApp' },
+  'transfers.viceVersa': { en: 'All transfers available in reverse direction on request', ru: 'Все трансферы доступны в обратном направлении по запросу' },
 
   // About Page
   'about.title': { en: 'About JamTripsGo', ru: 'О компании JamTripsGo' },
