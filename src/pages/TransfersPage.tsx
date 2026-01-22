@@ -74,6 +74,14 @@ const TransfersPage: React.FC = () => {
 
       {/* Transfer Cards */}
       <div className="container px-3 sm:px-4">
+        {/* Vice Versa Note */}
+        <div className="mb-4 p-3 sm:p-4 rounded-lg bg-secondary/10 border border-secondary/20">
+          <p className="text-sm sm:text-base text-foreground text-center">
+            <span className="font-medium text-secondary">✦</span>{' '}
+            {t('transfers.viceVersa')}{' '}
+            <span className="font-medium text-secondary">✦</span>
+          </p>
+        </div>
         <div className="space-y-3 sm:space-y-4">
           {transferRoutes.map((route, index) => (
             <TransferCard
