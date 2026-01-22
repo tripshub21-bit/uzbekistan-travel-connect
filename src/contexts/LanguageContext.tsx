@@ -32,6 +32,10 @@ const translations: Translations = {
   'trains.trainType': { en: 'Train Type', ru: 'Тип поезда' },
   'trains.timetable': { en: 'View Timetable', ru: 'Расписание' },
   'trains.enquire': { en: 'Enquire via WhatsApp', ru: 'Запрос через WhatsApp' },
+  'trains.departure': { en: 'Departure', ru: 'Отправление' },
+  'trains.arrival': { en: 'Arrival', ru: 'Прибытие' },
+  'trains.note': { en: 'Note', ru: 'Прим.' },
+  'trains.weekendOnly': { en: 'Fri-Sat-Sun', ru: 'Пт-Сб-Вс' },
 
   // Transfers Page
   'transfers.title': { en: 'Private Transfers', ru: 'Частные трансферы' },

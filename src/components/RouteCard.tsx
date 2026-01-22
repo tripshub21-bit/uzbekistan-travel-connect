@@ -7,6 +7,7 @@ interface Timetable {
   departure: string;
   arrival: string;
   train: string;
+  note?: string;
 }
 
 interface RouteCardProps {
@@ -68,17 +69,19 @@ const RouteCard: React.FC<RouteCardProps> = ({
 
         {/* Timetable Content */}
         <div className="mb-3 sm:mb-4 rounded-lg bg-muted/50 overflow-hidden">
-          <div className="grid grid-cols-2 gap-2 p-2.5 sm:p-3 text-[10px] sm:text-xs font-semibold text-muted-foreground border-b border-border">
-            <span>Departure</span>
-            <span>Arrival</span>
+          <div className="grid grid-cols-3 gap-2 p-2.5 sm:p-3 text-[10px] sm:text-xs font-semibold text-muted-foreground border-b border-border">
+            <span>{t('trains.departure')}</span>
+            <span>{t('trains.arrival')}</span>
+            <span>{t('trains.note')}</span>
           </div>
           {timetable.map((item, index) => (
             <div
               key={index}
-              className="grid grid-cols-2 gap-2 p-2.5 sm:p-3 text-xs sm:text-sm text-foreground border-b border-border last:border-0"
+              className="grid grid-cols-3 gap-2 p-2.5 sm:p-3 text-xs sm:text-sm text-foreground border-b border-border last:border-0"
             >
               <span className="font-medium">{item.departure}</span>
               <span className="font-medium">{item.arrival}</span>
+              <span className="text-[10px] sm:text-xs text-muted-foreground">{item.note ? t(item.note) : ''}</span>
             </div>
           ))}
         </div>
