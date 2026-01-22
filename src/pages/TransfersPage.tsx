@@ -13,18 +13,48 @@ const TransfersPage: React.FC = () => {
   ];
 
   const transferRoutes = [
-    { from: 'Tashkent', to: 'Samarkand', distance: 300, duration: '4h 30min', vehicles },
-    { from: 'Samarkand', to: 'Tashkent', distance: 300, duration: '4h 30min', vehicles },
-    { from: 'Samarkand', to: 'Bukhara', distance: 275, duration: '3h 30min', vehicles },
-    { from: 'Bukhara', to: 'Samarkand', distance: 275, duration: '3h 30min', vehicles },
-    { from: 'Bukhara', to: 'Khiva', distance: 450, duration: '6h 00min', vehicles },
-    { from: 'Khiva', to: 'Bukhara', distance: 450, duration: '6h 00min', vehicles },
-    { from: 'Tashkent', to: 'Bukhara', distance: 575, duration: '7h 00min', vehicles },
-    { from: 'Bukhara', to: 'Tashkent', distance: 575, duration: '7h 00min', vehicles },
-    { from: 'Samarkand', to: 'Shakhrisabz', distance: 90, duration: '1h 30min', vehicles },
-    { from: 'Shakhrisabz', to: 'Samarkand', distance: 90, duration: '1h 30min', vehicles },
-    { from: 'Tashkent', to: 'Fergana', distance: 300, duration: '4h 00min', vehicles },
-    { from: 'Fergana', to: 'Tashkent', distance: 300, duration: '4h 00min', vehicles },
+    {
+      from: 'Tashkent',
+      to: 'Samarkand',
+      distance: 300,
+      duration: '4h 30min',
+      vehicles,
+    },
+    {
+      from: 'Samarkand',
+      to: 'Bukhara',
+      distance: 275,
+      duration: '3h 30min',
+      vehicles,
+    },
+    {
+      from: 'Bukhara',
+      to: 'Khiva',
+      distance: 450,
+      duration: '6h 00min',
+      vehicles,
+    },
+    {
+      from: 'Tashkent',
+      to: 'Bukhara',
+      distance: 575,
+      duration: '7h 00min',
+      vehicles,
+    },
+    {
+      from: 'Samarkand',
+      to: 'Shakhrisabz',
+      distance: 90,
+      duration: '1h 30min',
+      vehicles,
+    },
+    {
+      from: 'Tashkent',
+      to: 'Fergana',
+      distance: 300,
+      duration: '4h 00min',
+      vehicles,
+    },
   ];
 
   return (
