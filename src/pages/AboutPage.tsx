@@ -29,19 +29,19 @@ const AboutPage: React.FC = () => {
   ];
 
   const stats = [
-    { value: '5000+', label: 'Happy Tourists' },
-    { value: '50+', label: 'Vehicles' },
-    { value: '10+', label: 'Cities' },
-    { value: '24/7', label: 'Support' },
+    { value: '5000+', label: t('about.happyTourists') },
+    { value: '50+', label: t('about.vehicles') },
+    { value: '10+', label: t('about.cities') },
+    { value: '24/7', label: t('about.supportStat') },
   ];
 
   const benefits = [
-    'Licensed and insured drivers',
-    'Modern, air-conditioned vehicles',
-    'Flexible booking options',
-    'Competitive pricing',
-    'English and Russian speaking guides',
-    'Child seats available on request',
+    t('about.benefit1'),
+    t('about.benefit2'),
+    t('about.benefit3'),
+    t('about.benefit4'),
+    t('about.benefit5'),
+    t('about.benefit6'),
   ];
 
   return (
@@ -72,7 +72,7 @@ const AboutPage: React.FC = () => {
       <div className="bg-muted py-10">
         <div className="container px-4">
           <h2 className="text-xl font-bold text-center text-foreground mb-6">
-            Why Travel With Us
+            {t('about.whyTravel')}
           </h2>
           <div className="space-y-4">
             {features.map((feature, index) => (
@@ -97,7 +97,7 @@ const AboutPage: React.FC = () => {
       {/* Benefits List */}
       <div className="container px-4 py-10">
         <h2 className="text-xl font-bold text-center text-foreground mb-6">
-          What We Offer
+          {t('about.whatWeOffer')}
         </h2>
         <div className="bg-card rounded-xl p-6 shadow-card border border-border">
           <div className="space-y-3">
@@ -119,9 +119,9 @@ const AboutPage: React.FC = () => {
               <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
             ))}
           </div>
-          <p className="text-lg font-semibold mb-1">Trusted by Travelers</p>
+          <p className="text-lg font-semibold mb-1">{t('about.trustedByTravelers')}</p>
           <p className="text-sm opacity-90">
-            Rated 4.9/5 by our customers on TripAdvisor
+            {t('about.ratedBy')}
           </p>
         </div>
       </div>

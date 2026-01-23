@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         {/* Links Grid */}
         <div className="grid grid-cols-2 gap-6 mb-8">
           <div>
-            <h3 className="font-semibold mb-3 text-secondary">Services</h3>
+            <h3 className="font-semibold mb-3 text-secondary">{t('footer.services')}</h3>
             <div className="space-y-2">
               <Link to="/trains" className="block text-sm opacity-80 hover:opacity-100 transition-opacity">
                 {t('nav.trains')}
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold mb-3 text-secondary">Company</h3>
+            <h3 className="font-semibold mb-3 text-secondary">{t('footer.company')}</h3>
             <div className="space-y-2">
               <Link to="/about" className="block text-sm opacity-80 hover:opacity-100 transition-opacity">
                 {t('nav.about')}
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="pt-6 border-t border-primary-foreground/20 text-sm opacity-60 text-center">
-          © {new Date().getFullYear()} JamTripsGo. All rights reserved.
+          © {new Date().getFullYear()} JamTripsGo. {t('footer.rights')}
         </div>
       </div>
     </footer>;

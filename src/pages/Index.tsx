@@ -11,23 +11,23 @@ const Index: React.FC = () => {
   const features = [
     {
       icon: Train,
-      title: 'High-Speed Trains',
-      description: 'Afrosiyab & Sharq trains connecting major cities',
+      title: t('index.highSpeedTrains'),
+      description: t('index.highSpeedTrainsDesc'),
     },
     {
       icon: Car,
-      title: 'Private Transfers',
-      description: 'Comfortable door-to-door service',
+      title: t('index.privateTransfers'),
+      description: t('index.privateTransfersDesc'),
     },
     {
       icon: Clock,
-      title: 'Quick Booking',
-      description: 'Instant response via WhatsApp',
+      title: t('index.quickBooking'),
+      description: t('index.quickBookingDesc'),
     },
     {
       icon: Shield,
-      title: 'Reliable Service',
-      description: 'Trusted by thousands of tourists',
+      title: t('index.reliableService'),
+      description: t('index.reliableServiceDesc'),
     },
   ];
 
@@ -92,7 +92,7 @@ const Index: React.FC = () => {
       <section className="py-12 bg-background">
         <div className="container px-4">
           <h2 className="text-2xl font-bold text-center text-foreground mb-8">
-            Why Choose JamTripsGo?
+            {t('index.whyChoose')}
           </h2>
           <div className="grid grid-cols-2 gap-4">
             {features.map((feature, index) => (
@@ -116,7 +116,7 @@ const Index: React.FC = () => {
       <section className="py-12 bg-muted">
         <div className="container px-4">
           <h2 className="text-2xl font-bold text-center text-foreground mb-8">
-            Popular Routes
+            {t('index.popularRoutes')}
           </h2>
           <div className="space-y-3">
             {popularRoutes.map((route, index) => (
@@ -138,8 +138,8 @@ const Index: React.FC = () => {
                   <div className="font-bold text-foreground">
                     {route.from} → {route.to}
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    {route.type === 'train' ? 'High-speed train' : 'Private transfer'}
+                <div className="text-sm text-muted-foreground">
+                    {route.type === 'train' ? t('index.highSpeedTrain') : t('index.privateTransfer')}
                   </div>
                 </div>
                 <ChevronRight className="w-5 h-5 text-muted-foreground" />
@@ -156,14 +156,14 @@ const Index: React.FC = () => {
             <Headphones className="w-8 h-8 text-primary-foreground" />
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">
-            24/7 Tourist Support
+            {t('index.support247')}
           </h2>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Our team is always ready to help you with your travel plans in Uzbekistan
+            {t('index.supportDesc')}
           </p>
           <Link to="/contact">
             <Button variant="outline" size="lg">
-              Contact Us
+              {t('index.contactUs')}
               <ChevronRight className="w-5 h-5" />
             </Button>
           </Link>

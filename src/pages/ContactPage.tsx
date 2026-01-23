@@ -38,26 +38,26 @@ Message: ${formData.message}`;
   const contactInfo = [
     {
       icon: Phone,
-      label: 'Phone',
+      label: t('contact.phone'),
       value: PHONE_NUMBER,
       href: `tel:${PHONE_NUMBER}`,
     },
     {
       icon: MessageCircle,
-      label: 'WhatsApp',
-      value: 'Chat with us',
+      label: t('contact.whatsapp'),
+      value: t('contact.chatWithUs'),
       href: `https://wa.me/${WHATSAPP_NUMBER}`,
     },
     {
       icon: MapPin,
-      label: 'Location',
+      label: t('contact.location'),
       value: 'Tashkent, Uzbekistan',
       href: null,
     },
     {
       icon: Clock,
-      label: 'Hours',
-      value: '24/7 Available',
+      label: t('contact.hours'),
+      value: t('contact.available247'),
       href: null,
     },
   ];
@@ -68,7 +68,7 @@ Message: ${formData.message}`;
     'Bukhara - Khiva',
     'Tashkent - Bukhara',
     'Samarkand - Shakhrisabz',
-    'Other',
+    t('contact.other'),
   ];
 
   return (
@@ -100,7 +100,7 @@ Message: ${formData.message}`;
       {/* Contact Form */}
       <div className="container px-4 mb-8">
         <div className="bg-card rounded-xl p-6 shadow-card border border-border">
-          <h2 className="text-lg font-bold text-foreground mb-4">Send Enquiry</h2>
+          <h2 className="text-lg font-bold text-foreground mb-4">{t('contact.sendEnquiry')}</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
@@ -113,7 +113,7 @@ Message: ${formData.message}`;
                 onChange={handleChange}
                 required
                 className="w-full h-12 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Your name"
+                placeholder={t('contact.yourName')}
               />
             </div>
 
@@ -142,7 +142,7 @@ Message: ${formData.message}`;
                 required
                 className="w-full h-12 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
-                <option value="">Select route</option>
+                <option value="">{t('contact.selectRoute')}</option>
                 {routes.map((route, index) => (
                   <option key={index} value={route}>
                     {route}
@@ -162,7 +162,7 @@ Message: ${formData.message}`;
                 required
                 className="w-full h-12 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
-                <option value="">Select</option>
+                <option value="">{t('contact.select')}</option>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '10+'].map((num) => (
                   <option key={num} value={num}>
                     {num}
@@ -181,7 +181,7 @@ Message: ${formData.message}`;
                 onChange={handleChange}
                 rows={3}
                 className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                placeholder="Additional details..."
+                placeholder={t('contact.additionalDetails')}
               />
             </div>
 
