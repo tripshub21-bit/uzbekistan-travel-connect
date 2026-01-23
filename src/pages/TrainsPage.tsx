@@ -165,20 +165,20 @@ const TrainsPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-20 pb-24 bg-background">
       {/* Afrosiyab Section */}
-      <div className="container px-4 py-6">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-12 rounded-xl hero-gradient flex items-center justify-center">
-            <Train className="w-6 h-6 text-primary-foreground" />
+      <div className="container px-4 py-6 sm:py-8">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl hero-gradient flex items-center justify-center">
+            <Train className="w-7 h-7 sm:w-8 sm:h-8 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-foreground">Afrosiyab</h1>
-            <p className="text-sm text-muted-foreground">{t('trains.subtitle')}</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Afrosiyab</h1>
+            <p className="text-base sm:text-lg text-muted-foreground font-medium">{t('trains.subtitle')}</p>
           </div>
         </div>
       </div>
 
       <div className="container px-4">
-        <div className="space-y-4">
+        <div className="space-y-5 sm:space-y-6">
           {afrosiyabRoutes.map((route, index) => (
             <RouteCard
               key={`afrosiyab-${index}`}
@@ -194,20 +194,20 @@ const TrainsPage: React.FC = () => {
       </div>
 
       {/* Sharq Section */}
-      <div className="container px-4 py-6 mt-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
-            <Train className="w-6 h-6 text-secondary-foreground" />
+      <div className="container px-4 py-6 sm:py-8 mt-8 sm:mt-10">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-secondary flex items-center justify-center">
+            <Train className="w-7 h-7 sm:w-8 sm:h-8 text-secondary-foreground" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-foreground">Sharq</h1>
-            <p className="text-sm text-muted-foreground">{t('trains.subtitle')}</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Sharq</h1>
+            <p className="text-base sm:text-lg text-muted-foreground font-medium">{t('trains.subtitle')}</p>
           </div>
         </div>
       </div>
 
       <div className="container px-4">
-        <div className="space-y-4">
+        <div className="space-y-5 sm:space-y-6">
           {sharqRoutes.map((route, index) => (
             <RouteCard
               key={`sharq-${index}`}

@@ -61,29 +61,29 @@ const TransfersPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 pb-20 sm:pb-24 bg-background">
       {/* Header */}
-      <div className="container px-3 sm:px-4 py-4 sm:py-6">
-        <div className="flex items-center gap-2.5 sm:gap-3 mb-2">
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl gold-gradient flex items-center justify-center">
-            <Car className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-foreground" />
+      <div className="container px-4 py-6 sm:py-8">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl gold-gradient flex items-center justify-center">
+            <Car className="w-7 h-7 sm:w-8 sm:h-8 text-secondary-foreground" />
           </div>
           <div>
-            <h1 className="text-xl sm:text-2xl font-bold text-foreground">{t('transfers.title')}</h1>
-            <p className="text-xs sm:text-sm text-muted-foreground">{t('transfers.subtitle')}</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('transfers.title')}</h1>
+            <p className="text-base sm:text-lg text-muted-foreground font-medium">{t('transfers.subtitle')}</p>
           </div>
         </div>
       </div>
 
       {/* Transfer Cards */}
-      <div className="container px-3 sm:px-4">
+      <div className="container px-4">
         {/* Vice Versa Note */}
-        <div className="mb-4 p-3 sm:p-4 rounded-lg bg-secondary/10 border border-secondary/20">
-          <p className="text-sm sm:text-base text-foreground text-center">
-            <span className="font-medium text-secondary">✦</span>{' '}
+        <div className="mb-5 sm:mb-6 p-4 sm:p-5 rounded-xl bg-secondary/10 border border-secondary/20">
+          <p className="text-base sm:text-lg text-foreground text-center font-medium">
+            <span className="font-bold text-secondary">✦</span>{' '}
             {t('transfers.viceVersa')}{' '}
-            <span className="font-medium text-secondary">✦</span>
+            <span className="font-bold text-secondary">✦</span>
           </p>
         </div>
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-5 sm:space-y-6">
           {transferRoutes.map((route, index) => (
             <TransferCard
               key={index}
